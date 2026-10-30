@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Модуль 4. Прибыльный мини-продукт · Конспект</title>
+<meta name="description" content="Конспект модуля 4 практикума «Антихрупкая система продаж»: что такое мини-продукт, опыт выгодной покупки, как выбрать тему, назвать, упаковать и в каком формате собрать.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0E0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('dm-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<style>
+  :root {
+    --bg: #F4F5F0;
+    --surface: #FFFFFF;
+    --surface-2: #ECEDE6;
+    --ink: #0B0E0D;
+    --ink-2: #2A302D;
+    --muted: #5D645F;
+    --line: #DCDED5;
+    --lime: #C8F135;
+    --lime-soft: rgba(200, 241, 53, .38);
+    --mark: rgba(200, 241, 53, .55);
+    --link: #0B0E0D;
+    --shadow: 0 1px 2px rgba(11,14,13,.04), 0 8px 24px rgba(11,14,13,.06);
+    --c-blue: #3B82F6;
+    --c-red: #EF4444;
+    --c-orange: #F59E0B;
+    --c-yellow: #EAB308;
+    --c-purple: #8B5CF6;
+    --c-green: #22C55E;
+    --c-gray: #8A918C;
+    --tint: 9%;
+    --radius: 18px;
+    --dark-card: #0B0E0D;
+    --dark-card-line: #0B0E0D;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0E0D;
+      --surface: #131816;
+      --surface-2: #1A201D;
+      --ink: #F4F5F0;
+      --ink-2: #D9DCD3;
+      --muted: #9AA29C;
+      --line: #262D29;
+      --lime-soft: rgba(200, 241, 53, .16);
+      --mark: rgba(200, 241, 53, .22);
+      --link: #C8F135;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      --tint: 13%;
+      --dark-card: #1A201D;
+      --dark-card-line: rgba(200,241,53,.35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0E0D;
+    --surface: #131816;
+    --surface-2: #1A201D;
+    --ink: #F4F5F0;
+    --ink-2: #D9DCD3;
+    --muted: #9AA29C;
+    --line: #262D29;
+    --lime-soft: rgba(200, 241, 53, .16);
+    --mark: rgba(200, 241, 53, .22);
+    --link: #C8F135;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    --tint: 13%;
+    --dark-card: #1A201D;
+    --dark-card-line: rgba(200,241,53,.35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+  img { max-width: 100%; display: block; }
+  b, strong { font-weight: 700; color: var(--ink); }
+  a { color: var(--link); text-decoration-color: var(--lime); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; border-radius: 6px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar__in {
+    max-width: 1240px; margin: 0 auto; padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; color: var(--ink); }
+  .brand__dot { width: 30px; height: 30px; border-radius: 9px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-weight: 900; font-size: 15px; flex: none; }
+  .brand__txt { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+  .brand__name { font-weight: 800; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand__sub { font-size: 11.5px; color: var(--muted); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .theme-btn {
+    flex: none; display: inline-flex; align-items: center; gap: 8px;
+    height: 38px; padding: 0 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    font: 700 13px "Montserrat", sans-serif; cursor: pointer;
+  }
+  .theme-btn:hover { border-color: var(--ink); }
+  .theme-btn svg { width: 17px; height: 17px; }
+  .theme-btn .i-sun { display: none; }
+  :root[data-theme="dark"] .theme-btn .i-sun { display: block; }
+  :root[data-theme="dark"] .theme-btn .i-moon { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-btn .i-sun { display: block; }
+    :root:not([data-theme="light"]) .theme-btn .i-moon { display: none; }
+  }
+  .progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 0; background: var(--lime); transition: width .1s linear; }
+
+  /* ---------- layout ---------- */
+  .layout { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 1fr; }
+  main { min-width: 0; max-width: 780px; width: 100%; margin: 0 auto; padding-bottom: 80px; }
+  .side { display: none; }
+  @media (min-width: 1100px) {
+    .layout { grid-template-columns: 270px minmax(0, 1fr); gap: 56px; }
+    main { margin: 0; }
+    .side { display: block; }
+    .side__in { position: sticky; top: 76px; padding: 28px 0 40px; max-height: calc(100vh - 76px); overflow: auto; }
+  }
+  .side__label { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px 12px; }
+  .side nav a {
+    display: block; padding: 8px 12px; border-radius: 10px; text-decoration: none;
+    color: var(--muted); font-size: 13.5px; font-weight: 600; line-height: 1.35;
+    border-left: 3px solid transparent;
+  }
+  .side nav a:hover { color: var(--ink); background: var(--surface); }
+  .side nav a.is-active { color: var(--ink); background: var(--surface); border-left-color: var(--lime); }
+  .side nav a .n { display: block; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 36px 0 8px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+  .chip--lime { background: var(--lime); color: #0B0E0D; }
+  .chip--ghost { border: 1px solid var(--line); color: var(--muted); background: var(--surface); }
+  h1 {
+    font-size: clamp(32px, 7.4vw, 54px); line-height: 1.04; letter-spacing: -.025em;
+    font-weight: 900; margin: 0 0 18px;
+  }
+  h1 .hl { background: linear-gradient(transparent 58%, var(--lime-soft) 58%, var(--lime-soft) 92%, transparent 92%); padding: 0 .06em; }
+  .lead { font-size: 17.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 22px; }
+  .result-card {
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line); border-radius: var(--radius); padding: 20px 22px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .result-card b { color: var(--lime); }
+  .result-card__ico { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--lime); display: grid; place-items: center; font-size: 20px; }
+  .result-card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+
+  /* ---------- sections ---------- */
+  section { scroll-margin-top: 76px; }
+  .sec { padding-top: 44px; }
+  .sec + .sec { border-top: 1px solid var(--line); margin-top: 44px; }
+  .lesson-label { font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .lesson-label .num { background: var(--lime); color: #0B0E0D; border-radius: 8px; padding: 3px 9px; letter-spacing: .02em; }
+  h2.sec-title { font-size: clamp(25px, 5vw, 34px); line-height: 1.15; letter-spacing: -.02em; font-weight: 900; margin: 0 0 8px; }
+  h3 { font-size: 20px; line-height: 1.3; font-weight: 800; letter-spacing: -.01em; margin: 34px 0 12px; scroll-margin-top: 84px; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 16px; padding-left: 0; list-style: none; }
+  ul > li, ol > li { position: relative; padding-left: 26px; margin-bottom: 9px; }
+  ul > li::before { content: ""; position: absolute; left: 6px; top: .66em; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 2px color-mix(in srgb, var(--ink) 12%, transparent); }
+  ol { counter-reset: n; }
+  ol > li { counter-increment: n; padding-left: 38px; }
+  ol > li::before { content: counter(n); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 800; display: grid; place-items: center; line-height: 1; }
+  .example { font-weight: 700; color: var(--muted); margin: 18px 0 10px; }
+
+  /* ---------- TOC block in content ---------- */
+  .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .toc h2 { margin: 0 0 14px; font-size: 22px; font-weight: 900; letter-spacing: -.01em; }
+  .toc ol { margin: 0; }
+  .toc ol > li { margin-bottom: 6px; padding-left: 0; }
+  .toc ol > li::before { display: none; }
+  .toc a {
+    display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px;
+    text-decoration: none; color: var(--ink); font-weight: 600; font-size: 15px; line-height: 1.35;
+    background: var(--surface-2); transition: transform .15s ease, background .15s ease;
+  }
+  .toc a:hover { background: var(--lime-soft); transform: translateX(3px); }
+  .toc a .k { flex: none; min-width: 34px; height: 30px; padding: 0 6px; border-radius: 9px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-size: 12.5px; font-weight: 800; }
+  .toc a .arr { margin-left: auto; color: var(--muted); font-weight: 800; }
+
+  /* ---------- callouts ---------- */
+  .co {
+    --c: var(--c-gray);
+    position: relative; display: flex; gap: 14px; align-items: flex-start;
+    padding: 18px 20px; margin: 18px 0; border-radius: 16px;
+    background: color-mix(in srgb, var(--c) var(--tint), var(--surface));
+    border: 1px solid color-mix(in srgb, var(--c) 28%, var(--line));
+  }
+  .co__ico { flex: none; font-size: 22px; line-height: 1.3; }
+  .co__body { min-width: 0; }
+  .co__body > :last-child { margin-bottom: 0; }
+  .co__body p { margin-bottom: 10px; }
+  .co__body ul > li { margin-bottom: 6px; }
+  .co--blue { --c: var(--c-blue); }
+  .co--red { --c: var(--c-red); }
+  .co--orange { --c: var(--c-orange); }
+  .co--yellow { --c: var(--c-yellow); }
+  .co--purple { --c: var(--c-purple); }
+  .co--green { --c: var(--c-green); }
+  .co--lead { font-size: 17px; }
+  .co--lead .co__body p:first-child { font-size: 17.5px; line-height: 1.5; }
+
+  .summary {
+    margin: 30px 0 0; border-radius: var(--radius); padding: 22px 22px 18px;
+    background: var(--dark-card); color: #F4F5F0; border: 1px solid var(--dark-card-line);
+  }
+  .summary__h { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 18px; margin-bottom: 14px; color: #F4F5F0; }
+  .summary__h .tick { width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 15px; }
+  .summary ul { margin: 0; }
+  .summary li { color: rgba(244,245,240,.88); }
+  .summary b { color: var(--lime); }
+  .summary ul > li::before { background: var(--lime); box-shadow: none; }
+
+  /* ---------- columns ---------- */
+  .cols { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 18px 0; }
+  .cols .co { margin: 0; flex-direction: column; gap: 6px; }
+  @media (min-width: 640px) { .cols { grid-template-columns: 1fr 1fr; } }
+
+  /* ---------- tables ---------- */
+  .table-wrap { margin: 18px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14.5px; line-height: 1.5; }
+  th, td { text-align: left; vertical-align: top; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--surface-2); font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); white-space: nowrap; }
+  td:first-child { font-weight: 600; }
+  tr.r-yellow td { background: color-mix(in srgb, var(--c-yellow) var(--tint), var(--surface)); }
+  tr.r-orange td { background: color-mix(in srgb, var(--c-orange) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-red td { background: color-mix(in srgb, var(--c-red) calc(var(--tint) + 3%), var(--surface)); }
+  tr.r-green td { background: color-mix(in srgb, var(--c-green) var(--tint), var(--surface)); }
+  tr.r-total td { background: var(--lime-soft); font-weight: 800; }
+  .table-hint { display: none; font-size: 12.5px; color: var(--muted); margin: -8px 0 16px; }
+  @media (max-width: 620px) { .table-hint { display: block; } }
+  .t-compact table { min-width: 0; }
+
+  /* ---------- figures ---------- */
+  figure.scheme { margin: 20px 0; }
+  .scheme__frame {
+    display: block; width: 100%; padding: 10px; border-radius: 16px; cursor: zoom-in;
+    background: #FFFFFF; border: 1px solid var(--line); box-shadow: var(--shadow);
+    position: relative;
+  }
+  .scheme__frame img { width: 100%; height: auto; border-radius: 8px; }
+  .scheme__zoom {
+    position: absolute; right: 12px; bottom: 12px; height: 30px; padding: 0 10px; border-radius: 999px;
+    background: #0B0E0D; color: #F4F5F0; font: 700 12px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 6px; opacity: .88;
+  }
+  @media (max-width: 520px) {
+    .scheme__frame { padding: 6px; }
+    .scheme__zoom { right: 6px; bottom: 6px; height: 26px; width: 26px; padding: 0; justify-content: center; font-size: 0; gap: 0; }
+    .scheme__zoom::before { content: "⤢"; font-size: 14px; }
+  }
+  figure.scheme figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; text-align: center; }
+
+  /* ---------- tabs ---------- */
+  .tabs { margin: 20px 0; }
+  .tabs__list { display: flex; gap: 6px; padding: 5px; border-radius: 14px; background: var(--surface-2); overflow-x: auto; scrollbar-width: none; }
+  .tabs__list::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 1 0 auto; border: 0; cursor: pointer; padding: 10px 14px; border-radius: 10px;
+    font: 700 14px "Montserrat", sans-serif; color: var(--muted); background: transparent; white-space: nowrap;
+  }
+  .tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+  .tab .tn { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 7px; margin-right: 6px; background: var(--line); color: var(--ink); font-size: 12px; font-weight: 800; }
+  .tab[aria-selected="true"] .tn { background: var(--lime); color: #0B0E0D; }
+  .tabpanel { padding: 4px 2px 0; }
+  .tabpanel[hidden] { display: none; }
+  .tabpanel h4 { font-size: 18px; font-weight: 900; margin: 16px 0 10px; }
+
+  /* ---------- glossary ---------- */
+  .gloss { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 18px 0; }
+  @media (min-width: 640px) { .gloss { grid-template-columns: 1fr 1fr; } }
+  .term { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .term dt { font-weight: 800; font-size: 15.5px; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .term dt::before { content: ""; width: 8px; height: 8px; border-radius: 3px; background: var(--lime); flex: none; }
+  .term dd { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+
+  /* ---------- download ---------- */
+  .dl-badge {
+    display: flex; align-items: center; gap: 14px; padding: 16px 18px; margin: 14px 0 22px; border-radius: 16px;
+    border: 2px dashed color-mix(in srgb, var(--c-orange) 60%, var(--line));
+    background: color-mix(in srgb, var(--c-orange) var(--tint), var(--surface));
+    font-weight: 700;
+  }
+  .dl-badge .ico { font-size: 24px; flex: none; }
+
+  /* ---------- homework ---------- */
+  .hw { margin: 18px 0; }
+  .hw label {
+    display: flex; gap: 14px; align-items: flex-start; cursor: pointer;
+    padding: 14px 16px; margin-bottom: 8px; border-radius: 14px;
+    background: var(--surface); border: 1px solid var(--line); transition: background .15s ease, border-color .15s ease;
+  }
+  .hw label:hover { border-color: var(--muted); }
+  .hw input { position: absolute; opacity: 0; pointer-events: none; }
+  .hw .box { flex: none; width: 24px; height: 24px; margin-top: 1px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; transition: all .15s ease; }
+  .hw .box svg { width: 14px; height: 14px; opacity: 0; color: #0B0E0D; }
+  .hw input:checked + .box { background: var(--lime); border-color: var(--lime); }
+  .hw input:checked + .box svg { opacity: 1; }
+  .hw input:checked ~ .txt { color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--muted) 60%, transparent); }
+  .hw input:checked ~ .txt b { color: var(--muted); }
+  .hw input:focus-visible + .box { outline: 3px solid var(--lime); outline-offset: 2px; }
+  .hw-count { font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  /* ---------- quiz ---------- */
+  details.q { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; overflow: hidden; }
+  details.q summary {
+    list-style: none; cursor: pointer; padding: 15px 18px; font-weight: 700; font-size: 15.5px;
+    display: flex; gap: 12px; align-items: center;
+  }
+  details.q summary::-webkit-details-marker { display: none; }
+  details.q summary::after { content: "+"; margin-left: auto; flex: none; width: 28px; height: 28px; border-radius: 9px; background: var(--surface-2); display: grid; place-items: center; font-size: 18px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+  details.q[open] summary::after { transform: rotate(45deg); background: var(--lime); color: #0B0E0D; }
+  details.q .ans { padding: 0 18px 16px; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 12px; margin: 0 18px; padding-left: 0; padding-right: 0; }
+
+  /* ---------- next ---------- */
+  .next {
+    display: flex; align-items: center; gap: 16px; margin-top: 30px; padding: 22px; border-radius: var(--radius);
+    background: var(--lime); color: #0B0E0D; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  a.next:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(200,241,53,.35); }
+  a.next:hover .next__arr { transform: translateX(3px); }
+  .next__arr { transition: transform .15s ease; }
+  .next__go { margin-left: auto; flex: none; font-weight: 800; font-size: 13px; white-space: nowrap; }
+  @media (max-width: 520px) { .next__go { display: none; } }
+  .next b { color: #0B0E0D; }
+  .next__arr { flex: none; width: 46px; height: 46px; border-radius: 14px; background: #0B0E0D; color: var(--lime); display: grid; place-items: center; font-size: 22px; font-weight: 900; }
+  .next p { margin: 0; font-size: 15.5px; line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; color: var(--muted); font-size: 13px; text-align: center; }
+
+  /* ---------- floating ---------- */
+  .fab {
+    position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 40;
+    height: 46px; padding: 0 16px; border-radius: 999px; border: 0; cursor: pointer;
+    background: var(--ink); color: var(--bg); font: 800 13px "Montserrat", sans-serif;
+    display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    opacity: 0; transform: translateY(12px); pointer-events: none; transition: all .2s ease; text-decoration: none;
+  }
+  .fab.show { opacity: 1; transform: none; pointer-events: auto; }
+  .fab .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+  @media (min-width: 1100px) { .fab { display: none; } }
+
+  /* ---------- lightbox ---------- */
+  .lb { position: fixed; inset: 0; z-index: 100; background: #0B0E0D; display: none; flex-direction: column; }
+  .lb.open { display: flex; }
+  .lb__bar { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; color: #F4F5F0; font-size: 13px; font-weight: 600; gap: 12px; }
+  .lb__close { border: 0; background: var(--lime); color: #0B0E0D; font: 800 13px "Montserrat", sans-serif; height: 38px; padding: 0 16px; border-radius: 999px; cursor: pointer; }
+  .lb__scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; display: flex; align-items: center; padding: 0 16px 24px; }
+  .lb__scroll img { max-width: none; width: auto; height: auto; max-height: 82vh; margin: auto; background: #fff; border-radius: 10px; }
+  .lb__scroll img { max-width: 100%; }
+  @media (max-width: 900px) { .lb__scroll img { width: 240vw; max-width: none; max-height: none; } }
+
+
+  /* ---------- module nav ---------- */
+  .back { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 18px; font-size: 13px; font-weight: 700; color: var(--muted); text-decoration: none; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .back:hover { color: var(--ink); border-color: var(--ink); }
+  .nav-pair { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 30px; }
+  .nav-pair .next { margin-top: 0; }
+  @media (min-width: 760px) { .nav-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); } }
+  .prev { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: var(--radius); text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); font-weight: 700; font-size: 14.5px; line-height: 1.4; transition: border-color .15s ease; }
+  .prev:hover { border-color: var(--ink); }
+  .prev__arr { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--surface-2); display: grid; place-items: center; font-weight: 900; font-size: 18px; }
+  .prev__k { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+  /* ---------- sub headings & nested lists ---------- */
+  h4.sub { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; margin: 24px 0 10px; }
+  .sub__n { flex: none; width: 28px; height: 28px; border-radius: 8px; background: var(--lime); color: #0B0E0D; display: grid; place-items: center; font-size: 14px; font-weight: 900; }
+  li > ul { margin: 8px 0 0; }
+  li > ul > li { margin-bottom: 6px; color: var(--ink-2); font-style: italic; }
+  li > ul > li::before { width: 6px; height: 2px; border-radius: 1px; top: .8em; box-shadow: none; background: var(--muted); }
+  details.q--example { margin: 18px 0; border-color: color-mix(in srgb, var(--c-yellow) 40%, var(--line)); }
+  details.q--example .ans ul { margin: 0; }
+
+  mark { background: var(--mark); color: inherit; padding: 0 .12em; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="#top" aria-label="В начало конспекта">
+      <span class="brand__dot">D</span>
+      <span class="brand__txt">
+        <span class="brand__name">Модуль 4 · Конспект</span>
+        <span class="brand__sub">Антихрупкая система продаж</span>
+      </span>
+    </a>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить светлую и тёмную тему">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+      <span id="themeLbl">Тема</span>
+    </button>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<div class="layout">
+  <aside class="side" aria-label="Навигация по конспекту">
+    <div class="side__in">
+      <p class="side__label">Оглавление</p>
+      <nav id="sideNav">
+        <a href="#logika"><span class="n">Схема</span>Вся логика модуля</a>
+        <a href="#urok-1"><span class="n">Урок 1</span>Мини-продукт и его место в воронке</a>
+        <a href="#urok-2"><span class="n">Урок 2</span>Опыт выгодной покупки</a>
+        <a href="#urok-3"><span class="n">Урок 3</span>Тема, цена, название, форматы</a>
+        <a href="#slovar"><span class="n">Справка</span>Словарь модуля</a>
+        <a href="#materialy"><span class="n">Скачать</span>Материалы для скачивания</a>
+        <a href="#dz"><span class="n">Практика</span>Домашнее задание</a>
+        <a href="#proverka"><span class="n">Тест</span>Проверь себя</a>
+      </nav>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+      <a class="back" href="https://asp-modul-3.vercel.app/">← Модуль 3. Мощный лид-магнит</a>
+      <div class="eyebrow">
+        <span class="chip chip--lime">🎟 Модуль 4</span>
+        <span class="chip chip--ghost">Конспект</span>
+      </div>
+      <h1>Прибыльный <span class="hl">мини-продукт</span></h1>
+      <p class="lead">Мини-продукт (трипваер) это <b>первая оплата</b> в вашей воронке. Здесь разбираем, <b>что такое мини-продукт на самом деле</b>, почему его главная задача <b>не деньги, а опыт выгодной покупки</b>, как выбрать тему, назвать, упаковать и в каком формате собрать.</p>
+      <div class="result-card">
+        <div class="result-card__ico" aria-hidden="true">🏁</div>
+        <p><b>Результат модуля:</b> идея, название, упаковка и наполнение вашего мини-продукта.</p>
+      </div>
+    </div>
+
+    <!-- ===== TOC ===== -->
+    <section class="sec" id="oglavlenie" aria-labelledby="toc-h">
+      <div class="toc">
+        <h2 id="toc-h">📑 Оглавление</h2>
+        <ol>
+          <li><a href="#urok-1"><span class="k">1</span><span>Урок 1. Что такое мини-продукт и его место в воронке</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-2"><span class="k">2</span><span>Урок 2. Зачем нужен мини-продукт: опыт выгодной покупки</span><span class="arr">↓</span></a></li>
+          <li><a href="#urok-3"><span class="k">3</span><span>Урок 3. Тема, цена, название и форматы мини-продукта</span><span class="arr">↓</span></a></li>
+          <li><a href="#slovar"><span class="k">📖</span><span>Словарь модуля</span><span class="arr">↓</span></a></li>
+          <li><a href="#materialy"><span class="k">📦</span><span>Материалы для скачивания</span><span class="arr">↓</span></a></li>
+          <li><a href="#dz"><span class="k">📝</span><span>Домашнее задание</span><span class="arr">↓</span></a></li>
+          <li><a href="#proverka"><span class="k">🧪</span><span>Проверь себя</span><span class="arr">↓</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== LOGIKA ===== -->
+    <section class="sec" id="logika">
+      <h2 class="sec-title">🗺 Вся логика модуля на одной картинке</h2>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/01-logika-modulya.webp" width="1800" height="461" alt="Логика модуля 4: лид-магнит (бесплатно, меняет рамку) → мини-продукт (500-3000 ₽, первый результат) → опыт выгодной покупки («получил больше, чем заплатил») → основной продукт (полное решение).">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="co co--yellow">
+        <div class="co__ico">💡</div>
+        <div class="co__body"><p><b>Мини-продукт это не маленький, а узкий продукт.</b> Он бьёт в <b>один конкретный затык</b>, даёт <b>первый результат</b> и создаёт ощущение <b>«я получил гораздо больше, чем заплатил»</b>. Именно это ведёт человека к основному продукту.</p></div>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 1 ===== -->
+    <section class="sec" id="urok-1">
+      <div class="lesson-label"><span class="num">Урок 1</span></div>
+      <h2 class="sec-title">Что такое мини-продукт и его место в воронке</h2>
+
+      <h3>🧠 Привычное определение и чего в нём не хватает</h3>
+      <ul>
+        <li>Обычно говорят: недорогой продукт за 500-3000 ₽, который <b>отсеивает халявщиков</b> и <b>готовит к покупке</b> основного продукта.</li>
+        <li>Это верно, но <b>поверхностно</b>: упускает то, от чего зависит, продастся он или нет.</li>
+        <li>Основа мини-продукта это <b>ваша экспертность</b>. Принципы и инструменты дадим, а наполнение за вами.</li>
+      </ul>
+
+      <h3>🎯 Три важных уточнения</h3>
+      <ol>
+        <li><b>Покупают не потому, что дёшево.</b> Мини-продукт продаётся на автомате, потому что <b>попадает в острую проблему</b>, которая реально мешает.</li>
+        <li><b>Мини-продукт это не маленький, а узкий продукт.</b> Он может быть объёмным, хоть 5-10 уроков. Главное, чтобы всё <b>било в одну точку</b> и решало конкретный затык <b>до конца и хорошо</b>. Плохо, когда в него напихано всё подряд и получается расфокус.</li>
+        <li><b>Мини-продукт это про инструмент и результат, а не про информацию.</b> Лид-магнит это рецепт, мини-продукт это готовый набор.</li>
+      </ol>
+      <div class="co co--red">
+        <div class="co__ico">🧨</div>
+        <div class="co__body"><p><b>Человек не получил результат или хотя бы ощущение результата, значит, мини-продукт не сработал.</b></p></div>
+      </div>
+
+      <h3>🧭 Место в воронке</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/02-mesto-v-voronke.webp" width="1800" height="481" loading="lazy" alt="Место мини-продукта в воронке: лид-магнит бесплатно → мини-продукт 500-3000 ₽, первая оплата → основной продукт, полное решение.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>Этап</th><th>Что происходит</th></tr></thead>
+          <tbody>
+            <tr><td><b>Лид-магнит</b> (бесплатно)</td><td>Человек по-новому видит проблему, начинает доверять, хочет решить её с вами</td></tr>
+            <tr class="r-yellow"><td><b>Мини-продукт</b> (500-3000 ₽)</td><td><b>Первая оплата.</b> Человек своими руками получает реальный эффект через ваше решение</td></tr>
+            <tr><td><b>Основной продукт</b></td><td>Полная трансформация, проблема решена целиком</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 1</div>
+        <ul>
+          <li>Покупают, потому что мини-продукт <b>попадает в острую проблему</b>, а не потому, что дёшево.</li>
+          <li>Мини-продукт <b>узкий, а не маленький</b>: одна точка, решена до конца.</li>
+          <li>Это <b>инструмент и результат</b>, а не информация.</li>
+          <li>В воронке это <b>первая оплата</b> между лид-магнитом и основным продуктом.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 2 ===== -->
+    <section class="sec" id="urok-2">
+      <div class="lesson-label"><span class="num">Урок 2</span></div>
+      <h2 class="sec-title">Зачем нужен мини-продукт: опыт выгодной покупки</h2>
+
+      <h3>💎 Главная задача не деньги</h3>
+      <ul>
+        <li>Мини-продукт <b>не про быстрые деньги</b>, окупаемость рекламы или пассивный доход.</li>
+        <li>Делаете его, чтобы просто подзаработать? <b>Не делайте</b>, не получится.</li>
+      </ul>
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📌</div>
+        <div class="co__body">
+          <p><b>Главная задача мини-продукта: создать опыт выгодной покупки.</b></p>
+          <p>После изучения человек должен почувствовать: <b>«Я получил гораздо больше, чем заплатил»</b>. Ценность должна <b>в десятки раз</b> превышать цену.</p>
+        </div>
+      </div>
+      <ul>
+        <li>Один опыт выгодной покупки <b>открывает дверь ко всем следующим продуктам</b>.</li>
+        <li>Когда за небольшие деньги человек получил не то, что обещали, <b>ломается вся воронка</b>.</li>
+      </ul>
+
+      <h3>❤️ Теория тысячи фанатов</h3>
+      <ul>
+        <li>Идея Кевина Келли: чтобы хорошо зарабатывать, <b>не нужны миллионы подписчиков</b>, нужна <b>1000 по-настоящему довольных людей</b>.</li>
+        <li>Такие люди привязываются <b>к вам как к эксперту</b>, а не к одному продукту. Они <b>покупают повторно</b> и слушают любое ваше предложение, даже если вы смените тему.</li>
+        <li>У тех, кто делает быстро и кое-как на хайпе, фанаты не появляются, поэтому их продажи и рушатся.</li>
+      </ul>
+      <div class="co co--red co--lead">
+        <div class="co__ico">🔑</div>
+        <div class="co__body"><p><b>Главный принцип всего практикума:</b> в какой бы точке воронки ни находился человек, <b>бесплатный контент, мини-продукт или основной продукт</b>, он должен чувствовать: «здесь я получаю <b>больше, чем заплатил</b>, и больше, чем у других». <b>Делайте качественно или не делайте вообще.</b></p></div>
+      </div>
+
+      <h3>💸 Зачем низкая цена</h3>
+      <ul>
+        <li><b>Первая оплата в воронке самая дорогая.</b> Сложнее всего, чтобы человек заплатил вам в первый раз, неважно сколько.</li>
+        <li>Низкая цена нужна <b>не для заработка на объёме</b>, а чтобы <b>снять страх</b>, сделать вход лёгким, а риск маленьким.</li>
+        <li>Сомневаетесь в цене? <b>Поставьте поменьше</b>, соберите отзывы, а заработаете потом.</li>
+      </ul>
+
+      <h3>🏁 Что считать результатом</h3>
+      <ul>
+        <li>Мини-продукт это <b>доверие через опыт</b>, самый сильный его вид. Первый реальный результат убеждает сильнее отзывов, регалий и рекламы.</li>
+        <li><b>До 60-70%</b> покупателей инфопродуктов их не используют. Гарантировать, что человек всё применит, нельзя.</li>
+        <li>Поэтому важен не только результат, но и <b>ощущение результата</b>: человек получил рабочий инструмент и продвинулся к решению хотя бы в голове.</li>
+        <li>Давайте <b>ровно столько</b>, чтобы человек сделал первые шаги и испытал это ощущение.</li>
+      </ul>
+      <div class="co co--green">
+        <div class="co__ico">🧩</div>
+        <div class="co__body"><p><b>Мини-продукт решает кусочек проблемы, но не решает её полностью.</b> Именно это создаёт мотив идти к вам за основным продуктом. Кажется, что у вас «только комплексная услуга»? <b>Отрежьте от неё кусочек</b>: он точно есть.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 2</div>
+        <ul>
+          <li>Главная задача: <b>опыт выгодной покупки</b>, а не заработок.</li>
+          <li>Ценность <b>в десятки раз выше цены</b>.</li>
+          <li>Стратегия: <b>1000 довольных фанатов</b>, а не миллионы подписчиков.</li>
+          <li>Низкая цена <b>снимает страх первой оплаты</b>.</li>
+          <li>Важно <b>ощущение результата</b> и то, что проблема решена <b>не до конца</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== УРОК 3 ===== -->
+    <section class="sec" id="urok-3">
+      <div class="lesson-label"><span class="num">Урок 3</span></div>
+      <h2 class="sec-title">Тема, цена, название и форматы мини-продукта</h2>
+
+      <h3>🎯 Название и обещание это 99% успеха</h3>
+      <ul>
+        <li>При первом взгляде на мини-продукт человек должен подумать: <b>«Ничего себе, это должно стоить гораздо дороже»</b>.</li>
+        <li>Попали в горячий затык и сформулировали объём ценности, значит, покупают <b>почти не раздумывая</b>.</li>
+        <li>Ошибка: делать мини-продукт <b>для своего эго</b>. Тема может казаться вам простой и избитой, но для клиента она <b>не очевидна</b>.</li>
+      </ul>
+
+      <h3 id="zatyk">🪨 Где брать тему: затык</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/03-zatyki-put.webp" width="1800" height="362" loading="lazy" alt="Путь из точки А (сейчас) в точку Б (цель) через три затыка.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <ul>
+        <li>Тему <b>не придумывают из головы</b>, а <b>достают из реальных запросов</b> клиентов: о чём часто спрашивают, на что жалуются, где разочаровываются.</li>
+        <li>Путь из точки А в точку Б <b>не прямой</b>, по пути есть <b>затыки</b>: места, где человек застрял и не может пройти сам. <b>Инструменты для преодоления затыка</b> и есть лучшая тема.</li>
+        <li>Затыков в любой нише <b>десятки</b>. Для сети мини-воронок хватит <b>2-3 тем</b>.</li>
+      </ul>
+      <div class="cols">
+        <div class="co co--red">
+          <div class="co__ico">😣</div>
+          <div class="co__body">
+            <p><b>Боль</b></p>
+            <p>То, что человек <b>чувствует</b>. Размытое состояние: «выгорел», «контент не продаёт». Решения на 1500 ₽ для этого нет.</p>
+          </div>
+        </div>
+        <div class="co co--blue">
+          <div class="co__ico">🪨</div>
+          <div class="co__body">
+            <p><b>Затык</b></p>
+            <p>То, где человек <b>конкретно застрял</b>: «не знаю, что говорить в сторис», «зажимаюсь на камеру». <b>Внутри одной боли несколько затыков.</b></p>
+          </div>
+        </div>
+      </div>
+      <ul>
+        <li>В один мини-продукт можно собрать <b>несколько затыков</b>. Это даже сильнее, лишь бы проблема <b>не решалась полностью</b>.</li>
+        <li>Иногда нужно <b>подстроиться под представления клиента</b> о решении: если люди ищут упражнения, дайте упражнения, а в личной работе объясните больше.</li>
+      </ul>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/04-bol-i-zatyki.webp" width="1611" height="724" loading="lazy" alt="Внутри одной боли несколько затыков. Боль: контент не продаёт, выгорел. Затык 1: не знаю, что говорить. Затык 2: не умею выстроить цепочку сторис. Затык 3: зажимаюсь на камеру.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+
+      <h3>⏱ Какой результат и за какой срок</h3>
+      <ul>
+        <li>Идеально: <b>быстрый результат</b>, в тот же день или <b>за 1-7 дней</b>.</li>
+        <li>Это результат, <b>которого не было в лид-магните</b>: человек что-то сделал через ваше готовое решение и увидел эффект.</li>
+        <li>Люди платят и за то, что <b>кто-то уже собрал всё в одном месте</b>: экономия своих часов на поиск дороже 500-700 ₽.</li>
+      </ul>
+
+      <h3>💰 Цена и ценность</h3>
+      <ul>
+        <li>Стандартный диапазон: <b>500-3000 ₽</b>. В нём покупают импульсно и не боятся потерять деньги.</li>
+        <li>Правило: ценность <b>в разы выше цены</b>. Не «получил то, за что заплатил», а <b>«получил гораздо больше»</b>.</li>
+      </ul>
+
+      <h3 id="upakovka">🏷 Как назвать и упаковать</h3>
+      <figure class="scheme">
+        <button class="scheme__frame" type="button" data-zoom aria-label="Открыть схему крупно">
+          <img src="img/05-upakovka.webp" width="1800" height="418" loading="lazy" alt="Упаковка мини-продукта: надзаголовок для кого → название по желанию → главный заголовок, что получит и зачем → булеты, что это и что даст → цена.">
+          <span class="scheme__zoom">⤢ Крупнее</span>
+        </button>
+      </figure>
+      <div class="table-wrap t-compact">
+        <table>
+          <thead><tr><th>Элемент</th><th>Задача</th></tr></thead>
+          <tbody>
+            <tr><td><b>1. Надзаголовок «для кого»</b></td><td>Сразу показать нишу, сегмент или ситуацию, для которой это</td></tr>
+            <tr><td><b>2. Название</b> (по желанию)</td><td>Имя продукта, чтобы его было удобно продвигать</td></tr>
+            <tr class="r-yellow"><td><b>3. Главный заголовок</b></td><td><b>Что человек конкретно получит + зачем ему это.</b> Одна часть без другой не работает</td></tr>
+            <tr><td><b>4. Булеты (3-5)</b></td><td>Каждый: <b>что это + что это вам даст</b>. Перевод на язык выгод и показ объёма</td></tr>
+            <tr><td><b>5. Цена</b></td><td>После объёма ценности, чтобы возник эффект «так дёшево?»</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <details class="q q--example">
+        <summary><span><b>Пример упаковки мини-продукта</b> (раскройте)</span></summary>
+        <div class="ans">
+          <p><b>120 проверенных тем для блога психолога</b><br>Готовый материал для сторис, рилс и Telegram-постов на полгода вперёд, даже если кажется, что в вашей нише всё уже сказали.</p>
+          <ul>
+            <li>120 тем, разложенных по задачам: привлечь, прогреть, довести до заявки</li>
+            <li>К каждой теме готовый угол захода и первый абзац, чтобы не тупить на старте</li>
+            <li>20 тем-провокаций, которые собирают комментарии и споры</li>
+            <li>Таблица-планировщик: расставили темы по дням и забыли про вопрос «что сегодня постить»</li>
+          </ul>
+          <p class="price"><b>1 490 ₽ вместо 6 000 ₽</b></p>
+        </div>
+      </details>
+
+      <h3 id="formaty">📦 Форматы мини-продукта (от простого к сложному)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Формат</th><th>Что это</th><th>Чем силён</th></tr></thead>
+          <tbody>
+            <tr><td><b>1. Живая диагностика с планом</b></td><td>Платный созвон 1 на 1 с дорожной картой</td><td>Платная диагностика конвертирует лучше бесплатной: приходят не просто послушать</td></tr>
+            <tr><td><b>2. Мини-услуга под ключ</b></td><td>Маленький кусочек основной работы: один экран дизайна, одна карусель, один сценарий</td><td>Самый короткий путь показать вашу работу в деле</td></tr>
+            <tr><td><b>3. Кейс или разбор с реальными цифрами</b></td><td>Реальный проект от и до: что делали, цифры, ошибки, лайфхаки</td><td>Доказательство метода и инструкция к повторению одновременно</td></tr>
+            <tr><td><b>4. Воркшоп или мастер-класс</b></td><td>Короткое обучение на 1-3 дня под одну задачу</td><td>Эффект события и собранного внимания</td></tr>
+            <tr><td><b>5. Интенсив с результатом на выходе</b></td><td>Записанный материал + проверка заданий или обратная связь</td><td>Конкретный результат и личное участие эксперта</td></tr>
+            <tr><td><b>6. База или библиотека инструментов</b></td><td>Много уроков и инструментов в одном месте, например в закрытом Telegram-канале</td><td>Огромный объём ценности, вход можно продавать <b>под разными углами</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-hint">← Таблицу можно листать вбок →</p>
+      <ul>
+        <li><b>Не знаете, с чего начать?</b> Начните с <b>живой диагностики</b> или <b>мини-услуги</b>.</li>
+        <li><b>Бандл</b>, то есть сочетание форматов (например, интенсив + кейс + инструменты + диагностика), один из самых сильных вариантов.</li>
+        <li>Без своей платформы удобнее всего <b>закрытый Telegram-канал</b>.</li>
+      </ul>
+      <div class="co co--orange">
+        <div class="co__ico">🔭</div>
+        <div class="co__body"><p><b>Буксуете и не понимаете, какой мини-продукт сделать?</b> Скорее всего, не хватает <b>практического опыта или насмотренности</b>. Изучите мини-продукты конкурентов и соберите свой объединённый формат. Не выдумывайте из головы.</p></div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__h"><span class="tick">✓</span>Главное из урока 3</div>
+        <ul>
+          <li>Тема берётся из <b>реального затыка</b> клиента, а не из головы.</li>
+          <li><b>Затык ≠ боль:</b> затык конкретен, и на него можно продать решение.</li>
+          <li>Цена <b>500-3000 ₽</b>, ценность <b>в разы выше</b>.</li>
+          <li>Упаковка: <b>для кого + что получит и зачем + булеты «что это и что даст»</b>.</li>
+          <li>Шесть форматов, начинать проще с <b>диагностики или мини-услуги</b>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== СЛОВАРЬ ===== -->
+    <section class="sec" id="slovar">
+      <h2 class="sec-title">📖 Словарь модуля</h2>
+      <dl class="gloss">
+        <div class="term"><dt>Мини-продукт (трипваер)</dt><dd>Узкий недорогой продукт, который решает один затык и даёт первый результат</dd></div>
+        <div class="term"><dt>Опыт выгодной покупки</dt><dd>Ощущение «я получил гораздо больше, чем заплатил»</dd></div>
+        <div class="term"><dt>Теория тысячи фанатов</dt><dd>Для стабильного дохода достаточно 1000 по-настоящему довольных клиентов</dd></div>
+        <div class="term"><dt>Затык</dt><dd>Конкретное место, где человек застрял на пути к цели и не может пройти сам</dd></div>
+        <div class="term"><dt>Булет</dt><dd>Короткий тезис: что это + что это вам даст</dd></div>
+        <div class="term"><dt>Бандл</dt><dd>Мини-продукт, собранный из нескольких форматов сразу</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== МАТЕРИАЛЫ ===== -->
+    <section class="sec" id="materialy">
+      <h2 class="sec-title">📦 Материалы для скачивания</h2>
+      <div class="co co--red">
+        <div class="co__ico">⚠️</div>
+        <div class="co__body"><p><b>Проверьте две вещи:</b> не отдали ли вы <b>бесплатно в лид-магните</b> то, за что собирались брать деньги, и <b>можете ли вы реально дать</b> то, что обещаете внутри.</p></div>
+      </div>
+
+      <div class="co co--blue co--lead">
+        <div class="co__ico">📘</div>
+        <div class="co__body">
+          <p><b>Плейбук по мини-продуктам</b></p>
+          <p>Формула названия, примеры упаковки, булеты и форматы от простого к сложному.</p>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте плейбук с платформы внутри 4 модуля</span></div>
+
+      <div class="co co--purple co--lead">
+        <div class="co__ico">🧪</div>
+        <div class="co__body">
+          <p><b>ИИ-ассистент №6. Методолог трипваера</b></p>
+          <p>Предлагает <b>3-5 идей мини-продукта</b> в полной упаковке, помогает с <b>названием</b> и <b>наполнением</b>, держит границу с лид-магнитом и строит <b>мостик к основному продукту</b>. Потом помогает собрать сам продукт: структуру, тезисы и инструменты по одному.</p>
+          <p><b>Важно:</b> сам продукт создаёте вы, ассистент помогает придумать, назвать и структурировать.</p>
+          <p><b>Берёт:</b> <a href="https://asp-modul-1.vercel.app/#materialy">«01 Фактура»</a>, <a href="https://asp-modul-2.vercel.app/#materialy">«02 ДНК воронки»</a>, <a href="https://asp-modul-3.vercel.app/#materialy">«03 О лид-магните»</a>. <b>Отдаёт:</b> «04 Мини-продукт».</p>
+        </div>
+      </div>
+      <div class="dl-badge"><span class="ico">📦</span><span>Скачайте ассистента (ZIP для установки) с платформы внутри 4 модуля</span></div>
+
+      <p><b>Как работать:</b></p>
+      <ol>
+        <li>Изучите плейбук по мини-продуктам.</li>
+        <li>Скачайте ZIP с платформы (4 модуль), распаковывать не нужно, и установите ассистента по инструкции из урока.</li>
+        <li>Запустите <b>Методолога трипваера</b> и загрузите фактуру, ДНК воронки и «О лид-магните».</li>
+        <li>Выберите <b>одну идею</b> из предложенных.</li>
+        <li>Доведите до результата <b>название, упаковку и наполнение</b>.</li>
+        <li>Соберите продукт: сначала структуру, потом инструменты по одному.</li>
+      </ol>
+      <div class="co co--yellow">
+        <div class="co__ico">🔀</div>
+        <div class="co__body"><p><b>Делаете первую воронку с нуля, без аудитории и опыта?</b> Мини-продукт можно отложить и собрать воронку сразу на <b>личное общение</b>. Трипваер добавите вторым кругом.</p></div>
+      </div>
+      <div class="co co--green">
+        <div class="co__ico">🏆</div>
+        <div class="co__body"><p><b>Быстрая победа модуля:</b> у вас есть мини-продукт с названием и упаковкой, от которых хочется сказать «так дёшево?».</p></div>
+      </div>
+    </section>
+
+    <!-- ===== ДЗ ===== -->
+    <section class="sec" id="dz">
+      <h2 class="sec-title">📝 Домашнее задание</h2>
+      <p class="hw-count" id="hwCount" aria-live="polite">Выполнено 0 из 7</p>
+      <div class="hw" id="hw">
+        <label><input type="checkbox" data-hw="1"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Выпишите 5-10 затыков</b> ваших клиентов из реальных вопросов и жалоб.</span></label>
+        <label><input type="checkbox" data-hw="2"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Выберите 1-3 затыка</b> для одного мини-продукта.</span></label>
+        <label><input type="checkbox" data-hw="3"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Пройдите Методолога трипваера</b> и выберите одну идею.</span></label>
+        <label><input type="checkbox" data-hw="4"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b><a href="#upakovka">Упакуйте</a>:</b> надзаголовок, главный заголовок, 3-5 булетов, цена.</span></label>
+        <label><input type="checkbox" data-hw="5"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Проверьте:</b> ценность в разы выше цены? Проблема решена не до конца? Нет пересечения с лид-магнитом?</span></label>
+        <label><input type="checkbox" data-hw="6"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Выберите <a href="#formaty">формат</a></b> и соберите продукт.</span></label>
+        <label><input type="checkbox" data-hw="7"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="txt"><b>Посмотрите 3-5 мини-продуктов конкурентов</b> для насмотренности.</span></label>
+      </div>
+    </section>
+
+    <!-- ===== ПРОВЕРЬ СЕБЯ ===== -->
+    <section class="sec" id="proverka">
+      <h2 class="sec-title">🧪 Проверь себя</h2>
+      <p style="color:var(--muted)">Сначала ответьте сами, потом нажмите на вопрос.</p>
+      <details class="q"><summary>Почему мини-продукт покупают?</summary><div class="ans">Потому что он <b>попадает в острую проблему</b>, которая реально мешает, а не потому, что он дешёвый.</div></details>
+      <details class="q"><summary>Почему мини-продукт «не маленький»?</summary><div class="ans">Это <b>узкий</b> продукт: он может быть объёмным, но бьёт <b>в одну точку</b> и решает конкретный затык до конца.</div></details>
+      <details class="q"><summary>Какая главная задача мини-продукта?</summary><div class="ans">Создать <b>опыт выгодной покупки</b>: «я получил гораздо больше, чем заплатил».</div></details>
+      <details class="q"><summary>Зачем мини-продукту низкая цена?</summary><div class="ans">Чтобы <b>снять страх первой оплаты</b> и сделать вход лёгким. Первая оплата в воронке самая дорогая.</div></details>
+      <details class="q"><summary>Чем затык отличается от боли?</summary><div class="ans">Боль это <b>размытое состояние</b>, которое человек чувствует. Затык это <b>конкретное место</b>, где он застрял. На затык можно продать решение.</div></details>
+      <details class="q"><summary>Из каких элементов состоит упаковка мини-продукта?</summary><div class="ans"><b>Надзаголовок «для кого», название, главный заголовок (что получит + зачем), булеты, цена.</b></div></details>
+      <details class="q"><summary>С какого формата проще начать?</summary><div class="ans">С <b>живой диагностики</b> или <b>мини-услуги под ключ</b>.</div></details>
+
+      <div class="nav-pair">
+        <a class="prev" href="https://asp-modul-3.vercel.app/">
+          <span class="prev__arr" aria-hidden="true">←</span>
+          <span><span class="prev__k">Назад</span>Модуль 3. Мощный лид-магнит</span>
+        </a>
+        <a class="next" href="https://asp-modul-5.vercel.app/">
+          <div class="next__arr" aria-hidden="true">→</div>
+          <p><b>Дальше: Модуль 5. Антихрупкий контент.</b> Из одного лид-магнита получаем контент на месяцы вперёд, и каждая единица ведёт обратно в воронку.</p>
+          <span class="next__go">Открыть конспект</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>© Dmitriymarketing School · Практикум «Антихрупкая система продаж» · Материалы только для участников</footer>
+
+  </main>
+</div>
+
+<a class="fab" id="fab" href="#oglavlenie"><span class="dot"></span>Оглавление</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Схема крупно">
+  <div class="lb__bar"><span id="lbHint">Листайте схему пальцем</span><button class="lb__close" id="lbClose" type="button">Закрыть ✕</button></div>
+  <div class="lb__scroll" id="lbScroll"><img id="lbImg" alt=""></div>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var KEY = 'dm-theme';
+
+  /* ---- theme ---- */
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paintLabel() {
+    var lbl = document.getElementById('themeLbl');
+    if (lbl) lbl.textContent = current() === 'dark' ? 'Светлая' : 'Тёмная';
+  }
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    paintLabel();
+  });
+  if (window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) mq.addEventListener('change', paintLabel);
+  }
+  paintLabel();
+
+  /* ---- progress + fab ---- */
+  var bar = document.getElementById('progress');
+  var fab = document.getElementById('fab');
+  var toc = document.getElementById('oglavlenie');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p + '%';
+    var tocBottom = toc.getBoundingClientRect().bottom;
+    fab.classList.toggle('show', tocBottom < 0);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- active section in side nav ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          links.forEach(function (l) { l.classList.remove('is-active'); });
+          map[e.target.id].classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  /* ---- tabs ---- */
+  document.querySelectorAll('[data-tabs]').forEach(function (box) {
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') { e.preventDefault(); select(tabs[(i + 1) % tabs.length], true); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); select(tabs[(i - 1 + tabs.length) % tabs.length], true); }
+      });
+    });
+  });
+
+  /* ---- homework checklist ---- */
+  var HW = 'dm-asp-m4-hw';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#hw input'));
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(HW) || '{}') || {}; } catch (e) { saved = {}; }
+  function count() {
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    document.getElementById('hwCount').textContent = 'Выполнено ' + n + ' из ' + boxes.length;
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.dataset.hw]) b.checked = true;
+    b.addEventListener('change', function () {
+      saved[b.dataset.hw] = b.checked;
+      try { localStorage.setItem(HW, JSON.stringify(saved)); } catch (e) {}
+      count();
+    });
+  });
+  count();
+
+  /* ---- lightbox ---- */
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbScroll = document.getElementById('lbScroll');
+  var lastBtn = null;
+  function openLb(img, btn) {
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    lastBtn = btn; lbScroll.scrollLeft = 0;
+    document.getElementById('lbClose').focus();
+  }
+  function closeLb() {
+    lb.classList.remove('open'); document.body.style.overflow = '';
+    if (lastBtn) lastBtn.focus();
+  }
+  document.querySelectorAll('[data-zoom]').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLb(btn.querySelector('img'), btn); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbScroll) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) closeLb(); });
+})();
+</script>
+</body>
+</html>
